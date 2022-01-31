@@ -14,7 +14,7 @@
 }
 .container{
   height:auto-flow;
-  max-width:10rem;
+  max-width:100%;
     line-height:1.2;
     border:2px solid white;
     background-color:white;
@@ -23,7 +23,7 @@
 }
 img{
   height:100px;
-  width:10rem;
+  width:100%;
   border-radius:7px 7px 0 0 ;
 
   
@@ -34,14 +34,9 @@ img{
 
     <script>
 
-
-
-let spanishRegion=fetch("https://restcountries.eu/rest/v2/lang/es")
-.then(data=>data.json())
-.then(data=> data.filter((country)=>country.region=="Europe"))
-.then(data=>createFlag(data))
-// .then(data=> console.log(data))
-
+fetch('https://restcountries.eu/rest/v2/all')
+ .then(data=>data.json())
+.then((data)=>createFlag(data))
 
     div=document.createElement("div");
   div.className='outer';
@@ -61,6 +56,10 @@ div.innerHTML +=`
   </div>`
    })
 }
+
+
+
+
 
     </script>
 </body>
