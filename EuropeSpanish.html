@@ -34,8 +34,6 @@ img{
 
     <script>
 
-
-
 let spanishRegion=fetch("https://restcountries.eu/rest/v2/lang/es")
 .then(data=>data.json())
 .then(data=> data.filter((country)=>country.region=="Europe"))
@@ -66,6 +64,4 @@ div.innerHTML +=`
     </script>
 </body>
 </html>
-
-
 
